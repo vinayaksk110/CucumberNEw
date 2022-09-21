@@ -11,7 +11,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class Test_Steps {
+public class Test_Steps_Login {
 
 	WebDriver driver = null;
 
