@@ -22,7 +22,7 @@ public class Test_Steps {
 
 		// implicitlywait
 		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-		driver.manage().window().fullscreen();
+		driver.manage().window().maximize();
 		// open website
 		driver.get("https://www.remotepc.com/");
 		System.out.println("Test 1 user is on home page pass");
