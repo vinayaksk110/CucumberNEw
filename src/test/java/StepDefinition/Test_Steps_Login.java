@@ -20,7 +20,7 @@ public class Test_Steps_Login {
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
 
-		// implicitlywait
+		// implicitly wait
 		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 		// open website
