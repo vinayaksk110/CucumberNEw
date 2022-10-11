@@ -6,17 +6,22 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import PageObject.LoginPage;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Test_Steps_Login {
-
 	WebDriver driver = null;
+	
+	LoginPage loginPage = new LoginPage(driver);
+	
 
 	@Given("user is on home page")
 	public void user_is_on_home_page() {
+		
+		
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
 
@@ -38,9 +43,12 @@ public class Test_Steps_Login {
 	@When("enters proper credentials")
 	public void enters_proper_credentials() {
 		// enter credentials and login
-		driver.findElement(By.id("email")).sendKeys("vinayak.kumbar+ent_at@idrive.com");
-		driver.findElement(By.id("password")).sendKeys("test12");
+//		driver.findElement(By.id("email")).sendKeys("vinayak.kumbar+ent_at@idrive.com");
+//		driver.findElement(By.id("password")).sendKeys("test12");
+		loginPage.enterUsername("vinayak.kumbar+ent_at@idrive.com");
+		loginPage.enterPassword("test12");
 		System.out.println("Test 3 enters proper credentials pass");
+		
 	}
 
 	@Then("users should be logged in and message should be displayed")
