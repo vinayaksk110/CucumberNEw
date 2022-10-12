@@ -5,11 +5,18 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.Wait;
 
-public class LoginPage  {
+import TestBase.Testbase;
+
+public class LoginPage extends Testbase {
+	WebDriver driver = null;
 	
-	public LoginPage(WebDriver driver) {
+	public LoginPage(WebDriver driver, Wait<WebDriver> wait) {
 		PageFactory.initElements(driver, this);
+		this.wait = (FluentWait<WebDriver>) wait;
+		this.driver = driver;
 	}
 	
 	

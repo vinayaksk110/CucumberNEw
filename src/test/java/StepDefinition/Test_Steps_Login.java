@@ -1,34 +1,21 @@
 package StepDefinition;
 
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-
 import PageObject.LoginPage;
+import TestBase.Testbase;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class Test_Steps_Login {
-	WebDriver driver = null;
+public class Test_Steps_Login extends Testbase {
 	
-	LoginPage loginPage = new LoginPage(driver);
+	LoginPage loginPage = new LoginPage(driver, wait);
 	
-
 	@Given("user is on home page")
 	public void user_is_on_home_page() {
-		
-		
-		WebDriverManager.chromedriver().setup();
-		driver = new ChromeDriver();
-
-		// implicitly wait
-		driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
-		driver.manage().window().maximize();
-		// open website
+//		initialization("firefox");
+		initialization();
 		driver.get("https://www.remotepc.com/");
 		System.out.println("Test 1 user is on home page pass");
 	}

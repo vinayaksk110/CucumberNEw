@@ -25,7 +25,7 @@ public class Test_steps_signup {
 		driver.manage().window().maximize();
 		// open website
 		driver.get("https://www.remotepc.com/");
-		System.out.println("Test 1 signup user is on home page pass");
+		System.out.println("Test 1 signup user is on home page pass-signupTest");
 	}
 
 	@When("user clicks on signup page")
