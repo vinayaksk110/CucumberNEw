@@ -3,6 +3,7 @@ package TestBase;
 import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.ElementNotInteractableException;
 import org.openqa.selenium.ElementNotVisibleException;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
@@ -63,7 +64,7 @@ public class Testbase {
 					// polling interval
 					.pollingEvery(Duration.ofMillis(100))
 					// ignore the exception
-					.ignoring(NoSuchElementException.class, ElementNotVisibleException.class);
+					.ignoring(NoSuchElementException.class, ElementNotInteractableException.class);
 			System.out.println("Created wait with browser timeout of " + timeOut + " seconds");
 		}
 	}
