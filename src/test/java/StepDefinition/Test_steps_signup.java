@@ -15,6 +15,7 @@ public class Test_steps_signup {
 
 	WebDriver driver = null;
 
+	@SuppressWarnings("deprecation")
 	@Given("user is on homepage")
 	public void user_is_on_homepage() {
 		WebDriverManager.chromedriver().setup();
