@@ -5,7 +5,7 @@
 	<artifactId>CucumberTestLEarn</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
-	<name>CucumberTestLEarn</name>
+	<name>CucumberTestLearn</name>
 	<url>http://www.remotepc.com</url>
 
 	<properties>
@@ -79,7 +79,13 @@
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
-			<version>3.5.3</version>
+			<version>4.4.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.13.2</version>
 		</dependency>
 
 

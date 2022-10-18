@@ -1,7 +1,7 @@
 package StepDefinition;
 
+import org.junit.Assert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import PageObject.LoginPage;
 import TestBase.Testbase;
 import io.cucumber.java.Before;
@@ -11,14 +11,15 @@ import io.cucumber.java.en.When;
 
 public class Test_Steps_Login extends Testbase {
 
-	LoginPage loginPage = new LoginPage(driver);
+	LoginPage loginPage = new LoginPage();
 
 	@Before
 	public void initializ() {
 		try {
-			initialization("firefox");
+			initialization("chrome");
 		} catch (Exception e) {
 			System.out.println(e);
+			Assert.assertTrue(false);
 		}
 	}
 
@@ -30,6 +31,7 @@ public class Test_Steps_Login extends Testbase {
 			System.out.println("Test 1 user is on home page pass");
 		} catch (Exception e) {
 			System.out.println(e);
+			Assert.assertTrue(false);
 		}
 	}
 
@@ -41,6 +43,7 @@ public class Test_Steps_Login extends Testbase {
 			System.out.println("Test 2 user clicks on login page pass");
 		} catch (Exception e) {
 			System.out.println(e);
+			Assert.assertTrue(false);
 		}
 	}
 
@@ -58,6 +61,7 @@ public class Test_Steps_Login extends Testbase {
 
 		} catch (Exception e) {
 			System.out.println(e);
+			Assert.assertTrue(false);
 		}
 	}
 
@@ -71,6 +75,7 @@ public class Test_Steps_Login extends Testbase {
 			System.out.println("Test 4 users should be logged in and message should be displayed pass");
 		} catch (Exception e) {
 			System.out.println(e);
+			Assert.assertTrue(false);
 		}
 	}
 

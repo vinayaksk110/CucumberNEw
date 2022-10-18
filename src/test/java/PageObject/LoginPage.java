@@ -1,6 +1,5 @@
 package PageObject;
 
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -8,7 +7,7 @@ import TestBase.Testbase;
 
 public class LoginPage extends Testbase {
 	
-	public LoginPage(WebDriver driver) {
+	public LoginPage() {
 		PageFactory.initElements(driver, this);
 	}
 	

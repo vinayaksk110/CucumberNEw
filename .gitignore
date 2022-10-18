@@ -1,4 +1,8 @@
 /target/
+<<<<<<< HEAD
+/target
+=======
 /target/classes
 /target/classes/META-INF/
 target/
+>>>>>>> branch 'test1' of https://github.com/vinayaksk110/CucumberNew.git
