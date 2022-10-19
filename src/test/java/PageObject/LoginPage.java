@@ -26,15 +26,11 @@ public class LoginPage extends Testbase {
 	
 	
 	public void enterUsername() {
-//		String user=prop.getProperty("username");
-		//WebElement username = Testbase.driver.findElement(By.id("email"));
-//		String user = "vinayak.kumbar+ent_at@idrive.com";
-//		System.out.println("tesdfdffsdf"+txtBox_Username);
-		txtBox_Username.sendKeys("vinayak.kumbar+ent_at@idrive.com");
+		String user = "vinayak.kumbar+ent_at@idrive.com";
+		txtBox_Username.sendKeys(user);
 	}
 	
 	public void enterPassword() {
-//		String pass=prop.getProperty("password");
 		String pass = "test12";
 		txtBox_Password.sendKeys(pass);
 	}

@@ -21,8 +21,8 @@ public class Test_Steps_Login extends Testbase {
 	public void initializ() {
 		try {
 			initialization("chrome");
-			
 			loginPage = new LoginPage();
+			
 		} catch (Exception e) {
 			System.out.println(e);
 			Assert.assertTrue(false);
