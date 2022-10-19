@@ -11,7 +11,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Testbase {
-	public WebDriver driver;
+	public static WebDriver driver;
 	public static int IMPLISIT_WAIT=20;
 	public static int PAGELOAD_TIME=40;
 

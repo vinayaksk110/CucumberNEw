@@ -1,5 +1,6 @@
 package PageObject;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -7,14 +8,14 @@ import org.openqa.selenium.support.PageFactory;
 import TestBase.Testbase;
 
 public class LoginPage extends Testbase {
-	public WebDriver driver;
+	//public WebDriver driver;
 	
 	public LoginPage() {
 		PageFactory.initElements(driver, this);
 	}
 	
 	
-	@FindBy(id="username") 
+	@FindBy(id="email") 
 	WebElement txtBox_Username;
 	
 	@FindBy(id="password")
@@ -26,8 +27,10 @@ public class LoginPage extends Testbase {
 	
 	public void enterUsername() {
 //		String user=prop.getProperty("username");
-		String user = "vinayak.kumbar+ent_at@idrive.com";
-		txtBox_Username.sendKeys(user);
+		//WebElement username = Testbase.driver.findElement(By.id("email"));
+//		String user = "vinayak.kumbar+ent_at@idrive.com";
+//		System.out.println("tesdfdffsdf"+txtBox_Username);
+		txtBox_Username.sendKeys("vinayak.kumbar+ent_at@idrive.com");
 	}
 	
 	public void enterPassword() {
