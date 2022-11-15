@@ -3,6 +3,7 @@ package StepDefinition;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import PageObject.LoginPage;
 import TestBase.Testbase;
@@ -59,11 +60,9 @@ public class Test_Steps_Login extends Testbase {
 			// enter credentials and login
 //			driver.findElement(By.id("email")).sendKeys("vinayak.kumbar+ent_at@idrive.com");
 //			driver.findElement(By.id("password")).sendKeys("test12");
-//			loginPage.enterUsername("vinayak.kumbar+ent_at@idrive.com");
-//			loginPage.enterPassword("test12");
-			System.out.println("printign login"+loginPage);
-			loginPage.enterUsername();
-			loginPage.enterPassword();
+//			System.out.println("printing login: "+loginPage.toString());
+			loginPage.enterUsername("vinayak.kumbar+ent_at@idrive.com");
+			loginPage.enterPassword("test12");
 			System.out.println("Test 3 enters proper credentials pass");
 
 		} catch (Exception e) {
